@@ -52,10 +52,34 @@ class Counter extends Component {
           clicked={this.props.onSubtractCounter}
         />
         <hr />
-        <button onClick={this.props.onStoreResult}>Store Results</button>
+        <button
+          style={{
+            width: "100px",
+            padding: "5px",
+            boxSizing: "border-box",
+            border: "1px solid green",
+            cursor: "pointer",
+            fontWeight: "bold",
+          }}
+          onClick={this.props.onStoreResult}
+        >
+          Store Results
+        </button>
         <ul>
           {this.props.storedResults.map((strResult) => (
             <li
+              style={{
+                width: "100px",
+                padding: "20px",
+                boxSizing: "border-box",
+                border: "1px solid blue",
+                margin: "16px",
+                boxShadow: "0px 2px 2px #ccc",
+                fontWeight: "bold",
+                textAlign: "center",
+                cursor: "pointer",
+                display: "inline-block",
+              }}
               key={strResult.id}
               onClick={() => this.props.onDeleteResult(strResult.id)}
             >
