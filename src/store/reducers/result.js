@@ -12,7 +12,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         results: state.results.concat({
           id: new Date(),
-          value: action.result,
+          value: action.result * 2,
         }),
       };
     case actionTypes.DELETE_RESULT:
